@@ -36,6 +36,7 @@ export const getTownById = async (req, res) => {
 
 // ? Add town and showing new town
 export const addTown = async (req, res) => {
+  const { town_name, city_id } = req.body;
   if (!town_name || !city_id) {
     return res
       .status(404)
