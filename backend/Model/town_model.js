@@ -4,7 +4,7 @@ import CityModel from "./city_model.js";
 
 const { DataTypes } = Sequelize;
 
-const TownModel = db.define("town", {
+const TownModel = db.define("towns", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,

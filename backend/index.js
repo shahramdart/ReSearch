@@ -13,6 +13,7 @@ import PropertyRouter from "./Routes/property.routes.js";
 import ListingRouter from "./Routes/listing.routes.js";
 import sequelizeStore from "connect-session-sequelize";
 import db from "./Config/db_connection.js";
+import TownRoutes from "./Routes/town.routes.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -74,6 +75,7 @@ app.use("/api/", houseRouter);
 app.use("/api/", typeRoute);
 app.use("/api/", PropertyRouter);
 app.use("/api/", ListingRouter);
+app.use("/api/", TownRoutes);
 
 //? Sync session store
 // store.sync();
