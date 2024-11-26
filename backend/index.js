@@ -81,7 +81,7 @@ app.use("/api/", TownRoutes);
 app.use("/api/", CityRoutes);
 app.use("/api/", LocalAreaRoutes);
 
-//? Sync session store
+//? Sync session store.
 // store.sync();
 
 app.listen(PORT, () => {

@@ -202,7 +202,7 @@ export const updateHouse = async (req, res) => {
       .json({ msg: "Error updating House!", error: error.message });
   }
 };
-// ? delete house by id
+// ? Delete house by id
 export const deleteHouse = async (req, res) => {
   const { id } = req.params;
   try {
