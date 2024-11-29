@@ -98,13 +98,6 @@ const HouseModel = db.define("house", {
       notEmpty: true,
     },
   },
-  location_id: {
-    type: DataTypes.INTEGER,
-    allowNull: true,
-    validate: {
-      notEmpty: false,
-    },
-  },
   office_id: {
     type: DataTypes.INTEGER,
     allowNull: true,
@@ -152,9 +145,6 @@ const HouseModel = db.define("house", {
 // Foreign key relationships
 HouseModel.belongsTo(User, { foreignKey: "user_id" });
 User.hasMany(HouseModel, { foreignKey: "user_id" });
-
-HouseModel.belongsTo(Location, { foreignKey: "location_id" });
-Location.hasMany(HouseModel, { foreignKey: "location_id" });
 
 HouseModel.belongsTo(OfficeCategory, { foreignKey: "office_id" });
 OfficeCategory.hasMany(HouseModel, { foreignKey: "office_id" });

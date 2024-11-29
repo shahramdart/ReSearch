@@ -1,6 +1,4 @@
 import Image from "../Model/images_model.js";
-import User from "../Model/user_model.js";
-import upload from "../middleware/upload.js";
 
 // ? Get all images
 export const getAllImages = async (req, res) => {
@@ -47,7 +45,7 @@ export const addImages = async (req, res) => {
   try {
     //? Create image records from uploaded files
     const imageRecords = req.files.map(({ filename }) => ({
-      imagePath: `/uploads/${filename}`, // Add `/uploads/` to the path
+      image_path: `/uploads/${filename}`, // Add `/uploads/` to the path
     }));
 
     //? Bulk insert image records

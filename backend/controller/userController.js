@@ -38,18 +38,10 @@ export const getUserById = async (req, res) => {
 
 //? Insert a new user
 export const createUser = async (req, res) => {
-  const { name, email, password, certificate, user_phone, permission } =
-    req.body;
+  const { name, email, password, user_phone, permission } = req.body;
 
   // Check if all required fields are provided
-  if (
-    !name ||
-    !email ||
-    !password ||
-    !certificate ||
-    !user_phone ||
-    !permission
-  ) {
+  if (!name || !email || !password || !user_phone || !permission) {
     return res.status(400).json({ msg: "All fields are required!" });
   }
 
@@ -83,7 +75,7 @@ export const createUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      certificate,
+
       user_phone,
       permission_id: permissionRecord.id, // Assuming your User model has this foreign key
     });

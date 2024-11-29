@@ -14,11 +14,10 @@ const CountryModel = db.define(
       allowNull: false,
     },
     country_name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(24),
       allowNull: false,
       validate: {
         notEmpty: true,
-        len: [24],
       },
     },
   },

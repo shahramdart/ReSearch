@@ -3,7 +3,7 @@ import db from "../Config/db_connection.js";
 
 const { DataTypes } = Sequelize;
 
-const Location = db.define(
+const LocationModel = db.define(
   "location",
   {
     id: {
@@ -27,10 +27,17 @@ const Location = db.define(
         notEmpty: true,
       },
     },
+    house_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+      },
+    },
   },
   {
     freezeTableName: true,
   }
 );
 
-export default Location;
+export default LocationModel;

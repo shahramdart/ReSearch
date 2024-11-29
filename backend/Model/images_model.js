@@ -12,8 +12,8 @@ const ImagesModel = db.define("images", {
     allowNull: false,
   },
 
-  imagePath: {
-    type: DataTypes.TEXT,
+  image_path: {
+    type: DataTypes.STRING(255),
     allowNull: true,
   },
   house_id: {

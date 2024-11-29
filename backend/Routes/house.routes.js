@@ -1,5 +1,7 @@
 import express from "express";
 const houseRoute = express.Router();
+import { upload } from "../middleware/upload.js";
+
 import {
   getAllHouse,
   getHousebyId,
@@ -11,7 +13,7 @@ import { verifyUser } from "../middleware/auth.js";
 
 houseRoute.get("/house", getAllHouse);
 houseRoute.get("/house/:id", getHousebyId);
-houseRoute.post("/house", verifyUser, addHouse);
+houseRoute.post("/house", verifyUser, upload.array("images", 5), addHouse); // Corrected here
 houseRoute.put("/house/:id", verifyUser, updateHouse);
 houseRoute.delete("/house/:id", verifyUser, deleteHouse);
 
