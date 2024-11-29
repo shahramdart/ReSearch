@@ -126,12 +126,10 @@ export const addHouse = async (req, res) => {
 
     // Handle image uploads (if any)
     if (req.files && req.files.length > 0) {
-      console.log(req.files); // Log files to ensure they are uploaded
       const imageRecords = req.files.map((file) => ({
         house_id: house.id,
         image_path: `/uploads/${file.filename}`, // Construct the image path
       }));
-      console.log(imageRecords); // Log the image records to check data
 
       // Insert image paths into the Images table
       await ImagesModel.bulkCreate(imageRecords);
