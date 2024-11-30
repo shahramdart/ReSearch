@@ -1,3 +1,19 @@
+For authentication 
+http://localhost:4000/api/login
+http://localhost:4000/api/getUser
+http://localhost:4000/api/logout
+http://localhost:4000/api/users
+
+Other routes
 http://localhost:4000/api/house
 http://localhost:4000/api/types
 http://localhost:4000/api/office
+http://localhost:4000/api/city
+http://localhost:4000/api/country
+http://localhost:4000/api/local
+http://localhost:4000/api/permission
+http://localhost:4000/api/property
+http://localhost:4000/api/town
+http://localhost:4000/api/listing
+http://localhost:4000/api/type
+
