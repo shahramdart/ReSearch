@@ -4,7 +4,6 @@ import session from "express-session";
 import dotenv from "dotenv";
 import UserRoutes from "./Routes/users.routes.js";
 import permissionRouter from "./Routes/permission.routes.js";
-import multer from "multer";
 import authRouter from "./Routes/auth.routes.js";
 import officeRouter from "./Routes/officeCategory.routes.js";
 import imagesRouter from "./Routes/images.routes.js";

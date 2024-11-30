@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 29, 2024 at 07:58 PM
+-- Generation Time: Nov 30, 2024 at 10:55 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -101,7 +101,7 @@ CREATE TABLE `houses` (
 --
 
 INSERT INTO `houses` (`id`, `price`, `area`, `bedroom`, `bathroom`, `kichen`, `living_room`, `direction`, `floor_number`, `user_id`, `listing_id`, `property_id`, `office_id`, `type_id`, `country_id`, `city_id`, `town_id`, `local_area_id`, `createdAt`, `updatedAt`) VALUES
-(12, 100000.00, 100, 1, 1, 1, 1, 'East', 1, 1, 1, 2, NULL, 2, 3, 1, 4, 1, '2024-11-29 18:47:02', '2024-11-29 18:47:02');
+(12, 200000.00, 200, 2, 2, 2, 1, 'South East', 1, 1, 1, 2, NULL, 2, 3, 1, 4, 1, '2024-11-30 09:52:18', '2024-11-30 09:52:18');
 
 -- --------------------------------------------------------
 
@@ -122,10 +122,7 @@ CREATE TABLE `images` (
 --
 
 INSERT INTO `images` (`id`, `image_path`, `house_id`, `createdAt`, `updatedAt`) VALUES
-(21, '/uploads/1732906022517.jpg', 12, '2024-11-29 18:47:02', '2024-11-29 18:47:02'),
-(22, '/uploads/1732906022522.jpg', 12, '2024-11-29 18:47:02', '2024-11-29 18:47:02'),
-(23, '/uploads/1732906022522.jpeg', 12, '2024-11-29 18:47:02', '2024-11-29 18:47:02'),
-(24, '/uploads/1732906022523.jpg', 12, '2024-11-29 18:47:02', '2024-11-29 18:47:02');
+(25, '/uploads/1732960338189.png', 12, '2024-11-30 09:52:18', '2024-11-30 09:52:18');
 
 -- --------------------------------------------------------
 
@@ -266,7 +263,7 @@ CREATE TABLE `Sessions` (
 --
 
 INSERT INTO `Sessions` (`sid`, `expires`, `data`, `createdAt`, `updatedAt`) VALUES
-('JixUx8GwxTJX_Jhcj0oS3ySVJFcCoBsJ', '2024-11-30 18:48:13', '{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"secure\":false,\"httpOnly\":true,\"path\":\"/\"},\"userId\":1}', '2024-11-29 18:48:13', '2024-11-29 18:48:13'),
+('JixUx8GwxTJX_Jhcj0oS3ySVJFcCoBsJ', '2024-12-01 09:52:18', '{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"secure\":false,\"httpOnly\":true,\"path\":\"/\"},\"userId\":1}', '2024-11-30 09:52:18', '2024-11-30 09:52:18'),
 ('kFsvl12U2wW8llFfOaZEhp0KCiLo_2Td', '2024-11-30 18:44:30', '{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"secure\":false,\"httpOnly\":true,\"path\":\"/\"}}', '2024-11-29 18:44:30', '2024-11-29 18:44:30');
 
 -- --------------------------------------------------------
@@ -473,7 +470,7 @@ ALTER TABLE `houses`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `listing`
