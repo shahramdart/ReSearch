@@ -1,0 +1,3 @@
+http://localhost:4000/api/house
+http://localhost:4000/api/types
+http://localhost:4000/api/office
